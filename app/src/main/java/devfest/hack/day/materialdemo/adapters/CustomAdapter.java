@@ -15,9 +15,9 @@ import devfest.hack.day.materialdemo.R;
 // See
 // https://developer.android.com/training/material/lists-cards.html
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder> {
-    private String[] mDataset;
+    private String[][] mDataset;
 
-    public CustomAdapter(String[] mDataset) {
+    public CustomAdapter(String[][] mDataset) {
         this.mDataset = mDataset;
     }
 
@@ -31,7 +31,8 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
 
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int position) {
-        viewHolder.title.setText(mDataset[position]);
+        viewHolder.title.setText(mDataset[position][0]);
+        viewHolder.count.setText(mDataset[position][1]);
     }
 
     @Override

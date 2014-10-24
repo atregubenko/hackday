@@ -41,7 +41,7 @@ public class RecycleViewFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         //        // specify an adapter (see also next example)
-        String[] myDataset = new String[] {"one", "two", "three", "four", "five"};
+        String[][] myDataset = {{"Детский мир","999 обьялений"}, {"Недвижимость","999 обьялений"}, {"Транспорт","999 обьялений"}, {"Работа","999 обьялений"}, {"Животные","999 обьялений"}, {"Дом и сад","999 обьялений"}, {"Электроника","999 обьялений"}};
         mAdapter = new CustomAdapter(myDataset);
         mRecyclerView.setAdapter(mAdapter);
 
