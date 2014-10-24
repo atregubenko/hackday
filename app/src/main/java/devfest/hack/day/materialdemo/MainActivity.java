@@ -1,9 +1,7 @@
 package devfest.hack.day.materialdemo;
 
 import android.annotation.TargetApi;
-import android.graphics.Outline;
 import android.os.Build;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
@@ -27,15 +25,12 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.my_awesome_toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_launcher);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.content, new RecycleViewFragment()).commit();
 
-//        int size = getResources().getDimensionPixelSize(R.dimen.item_height);
-//        Outline outline = new Outline();
-//        outline.setOval(0, 0, size, size);
         fab = (ImageButton)findViewById(R.id.fab);
-//        fab.setOutline(outline);
-//        fab.setOutline(mOutlineCircle);
         fab.setClipToOutline(true);
         fab.setOnClickListener(this);
     }
