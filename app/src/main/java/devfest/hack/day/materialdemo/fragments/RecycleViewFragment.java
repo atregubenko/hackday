@@ -40,7 +40,8 @@ public class RecycleViewFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         //        // specify an adapter (see also next example)
-        mAdapter = new CustomAdapter();
+        String[] myDataset = new String[] {"one", "two", "three", "four", "five"};
+        mAdapter = new CustomAdapter(myDataset);
         mRecyclerView.setAdapter(mAdapter);
     }
 }

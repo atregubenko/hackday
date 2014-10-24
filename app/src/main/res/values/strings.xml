@@ -8,5 +8,6 @@
     <string name="action_favorite">Favorite</string>
     <string name="action_profile">Profile</string>
     <string name="action_search">Search</string>
+    <string name="count_pattern">18 179 announcements</string>
 
 </resources>
