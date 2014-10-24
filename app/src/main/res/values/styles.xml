@@ -3,6 +3,12 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:textViewStyle">@style/GrayText</item>
+    </style>
+
+    <style name="GrayText" parent="android:style/Widget.TextView">
+        <item name="android:textColor">@color/text_color</item>
     </style>
 
 </resources>
