@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import devfest.hack.day.materialdemo.R;
+import devfest.hack.day.materialdemo.adapters.CustomAdapter;
 
 /**
  * Created by nnet on 24.10.14.
@@ -17,7 +18,7 @@ import devfest.hack.day.materialdemo.R;
 public class RecycleViewFragment extends Fragment {
     private RecyclerView mRecyclerView;
     private LinearLayoutManager mLayoutManager;
-    private MyAdapter mAdapter;
+    private CustomAdapter mAdapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -39,7 +40,7 @@ public class RecycleViewFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         //        // specify an adapter (see also next example)
-        mAdapter = new MyAdapter(myDataset);
+        mAdapter = new CustomAdapter();
         mRecyclerView.setAdapter(mAdapter);
     }
 }
