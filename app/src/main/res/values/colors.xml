@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="blue">#03a9f4</color>
-    <color name="yellow">#eeff41</color>
+    <color name="blue">#ff03a9f4</color>
+    <color name="yellow">#ffeeff41</color>
     <color name="action_bar">@color/blue</color>
-    <color name="text_color">#aeaeae</color>
+    <color name="text_color">#ffaeaeae</color>
 </resources>
