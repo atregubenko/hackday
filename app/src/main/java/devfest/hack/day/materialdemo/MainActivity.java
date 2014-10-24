@@ -1,5 +1,6 @@
 package devfest.hack.day.materialdemo;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -38,6 +39,7 @@ public class MainActivity extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_favorite) {
+            startActivity(new Intent(this, AddActivity.class));
             return true;
         }
 
