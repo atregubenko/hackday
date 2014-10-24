@@ -7,6 +7,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import devfest.hack.day.materialdemo.fragments.AddFragment;
 import devfest.hack.day.materialdemo.fragments.RecycleViewFragment;
 
 
@@ -39,7 +40,8 @@ public class MainActivity extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_favorite) {
-            startActivity(new Intent(this, AddActivity.class));
+            getSupportFragmentManager().beginTransaction().replace(R.id.content, new AddFragment()).addToBackStack("add").commit();
+            //startActivity(new Intent(this, AddActivity.class));
             return true;
         }
 
