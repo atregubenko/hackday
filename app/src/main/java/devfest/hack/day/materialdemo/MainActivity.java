@@ -3,17 +3,20 @@ package devfest.hack.day.materialdemo;
 import android.annotation.TargetApi;
 import android.graphics.Outline;
 import android.os.Build;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageButton;
 
+import devfest.hack.day.materialdemo.fragments.AddFragment;
 import devfest.hack.day.materialdemo.fragments.RecycleViewFragment;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity implements View.OnClickListener {
     private ImageButton fab;
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
@@ -34,6 +37,7 @@ public class MainActivity extends ActionBarActivity {
 //        fab.setOutline(outline);
 //        fab.setOutline(mOutlineCircle);
         fab.setClipToOutline(true);
+        fab.setOnClickListener(this);
     }
 
     @Override
@@ -52,9 +56,18 @@ public class MainActivity extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_favorite) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.content, new AddFragment()).addToBackStack("add").commit();
+            //startActivity(new Intent(this, AddActivity.class));
             return true;
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (view.equals(fab)) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.content, new AddFragment()).addToBackStack("add").commit();
+        }
     }
 }
