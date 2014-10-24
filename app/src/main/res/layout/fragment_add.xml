@@ -18,7 +18,7 @@
         android:background="@drawable/bg_white_selector"
         android:elevation="5dp"
         android:text="Add photo"
-        android:src="@drawable/action_profile_passive"
+        android:src="@drawable/action_add_photo"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="15dp"/>
@@ -30,19 +30,19 @@
         android:elevation="5dp"
         android:background="@drawable/bg_white_selector"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="1dp"
-        android:layout_marginRight="1dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
         >
 
        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/item_height"
+            android:layout_height="@dimen/add_item_height"
             >
            <ImageView
                android:layout_width="wrap_content"
                android:layout_height="match_parent"
                android:src="@drawable/action_profile_passive"
-               android:padding="20dp"
+               android:padding="5dp"
                android:id="@+id/icon"
                android:layout_alignParentLeft="true" />
            <TextView
@@ -66,13 +66,13 @@
             android:background="#80eeeeee"/>
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/item_height"
+            android:layout_height="@dimen/add_item_height"
             >
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/action_profile_passive"
-                android:padding="20dp"
+                android:padding="5dp"
                 android:id="@+id/icon_1"
                 android:layout_alignParentLeft="true" />
             <TextView
@@ -96,13 +96,13 @@
             android:background="#80eeeeee"/>
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/item_height"
+            android:layout_height="@dimen/add_item_height"
             >
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/action_profile_passive"
-                android:padding="20dp"
+                android:padding="5dp"
                 android:id="@+id/icon_2"
                 android:layout_alignParentLeft="true" />
             <TextView
@@ -130,19 +130,19 @@
         android:elevation="5dp"
         android:background="@drawable/bg_white_selector"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="1dp"
-        android:layout_marginRight="1dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
         >
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/item_height"
+            android:layout_height="@dimen/add_item_height"
             >
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/action_profile_passive"
-                android:padding="20dp"
+                android:padding="5dp"
                 android:id="@+id/icon_3"
                 android:layout_alignParentLeft="true" />
             <TextView
@@ -166,13 +166,13 @@
             android:background="#80eeeeee"/>
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/item_height"
+            android:layout_height="@dimen/add_item_height"
             >
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/action_profile_passive"
-                android:padding="20dp"
+                android:padding="5dp"
                 android:id="@+id/icon_4"
                 android:layout_alignParentLeft="true" />
             <TextView
@@ -196,13 +196,13 @@
             android:background="#80eeeeee"/>
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/item_height"
+            android:layout_height="@dimen/add_item_height"
             >
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/action_profile_passive"
-                android:padding="20dp"
+                android:padding="5dp"
                 android:id="@+id/icon_5"
                 android:layout_alignParentLeft="true" />
             <TextView
