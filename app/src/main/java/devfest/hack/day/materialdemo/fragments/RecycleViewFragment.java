@@ -10,6 +10,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import devfest.hack.day.materialdemo.CustomItem;
 import devfest.hack.day.materialdemo.R;
 import devfest.hack.day.materialdemo.adapters.CustomAdapter;
 
@@ -41,7 +45,19 @@ public class RecycleViewFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         //        // specify an adapter (see also next example)
-        String[][] myDataset = {{"Детский мир","999 обьялений"}, {"Недвижимость","999 обьялений"}, {"Транспорт","999 обьялений"}, {"Работа","999 обьялений"}, {"Животные","999 обьялений"}, {"Дом и сад","999 обьялений"}, {"Электроника","999 обьялений"}};
+        List<CustomItem> myDataset = new ArrayList<CustomItem>();
+        myDataset.add(new CustomItem(R.drawable.ic_cast_grey600_48dp, "Детский мир", "999 обьялений"));
+        myDataset.add(new CustomItem(R.drawable.ic_computer_grey600_48dp, "Недвижимость", "999 обьялений"));
+        myDataset.add(new CustomItem(R.drawable.ic_desktop_mac_grey600_48dp, "Транспорт", "999 обьялений"));
+        myDataset.add(new CustomItem(R.drawable.ic_desktop_windows_grey600_48dp, "Работа", "999 обьялений"));
+        myDataset.add(new CustomItem(R.drawable.ic_headset_grey600_48dp, "Животные", "999 обьялений"));
+        myDataset.add(new CustomItem(R.drawable.ic_headset_mic_grey600_36dp, "Дом и сад", "999 обьялений"));
+        myDataset.add(new CustomItem(R.drawable.ic_cast_grey600_48dp, "Детский мир", "999 обьялений"));
+        myDataset.add(new CustomItem(R.drawable.ic_keyboard_voice_grey600_48dp, "Недвижимость", "999 обьялений"));
+        myDataset.add(new CustomItem(R.drawable.ic_keyboard_alt_grey600_48dp, "Транспорт", "999 обьялений"));
+        myDataset.add(new CustomItem(R.drawable.ic_keyboard_hide_grey600_36dp, "Работа", "999 обьялений"));
+        myDataset.add(new CustomItem(R.drawable.ic_headset_grey600_48dp, "Животные", "999 обьялений"));
+        myDataset.add(new CustomItem(R.drawable.action_add_photo, "Дом и сад", "999 обьялений"));
         mAdapter = new CustomAdapter(myDataset);
         mRecyclerView.setAdapter(mAdapter);
 

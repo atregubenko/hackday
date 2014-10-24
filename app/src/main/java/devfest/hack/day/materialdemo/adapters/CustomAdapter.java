@@ -7,6 +7,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.List;
+
+import devfest.hack.day.materialdemo.CustomItem;
 import devfest.hack.day.materialdemo.R;
 
 /**
@@ -15,9 +18,9 @@ import devfest.hack.day.materialdemo.R;
 // See
 // https://developer.android.com/training/material/lists-cards.html
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder> {
-    private String[][] mDataset;
+    private List<CustomItem> mDataset;
 
-    public CustomAdapter(String[][] mDataset) {
+    public CustomAdapter(List<CustomItem> mDataset) {
         this.mDataset = mDataset;
     }
 
@@ -31,13 +34,14 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
 
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int position) {
-        viewHolder.title.setText(mDataset[position][0]);
-        viewHolder.count.setText(mDataset[position][1]);
+        viewHolder.icon.setImageResource(mDataset.get(position).getResId());
+        viewHolder.title.setText(mDataset.get(position).getTitle());
+        viewHolder.count.setText(mDataset.get(position).getCount());
     }
 
     @Override
     public int getItemCount() {
-        return mDataset.length;
+        return mDataset.size();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {

@@ -10,10 +10,13 @@
     android:elevation="2dp">
 
     <ImageView
-        android:layout_width="@dimen/item_height"
-        android:layout_height="@dimen/item_height"
+        android:layout_width="@dimen/add_item_height"
+        android:layout_height="@dimen/add_item_height"
         android:id="@+id/icon"
-        android:src="@drawable/action_settings"/>
+        android:src="@drawable/action_settings"
+        android:layout_centerVertical="true"
+        android:padding="10dp"
+        android:layout_marginRight="10dp"/>
 
     <TextView
         android:layout_width="match_parent"
