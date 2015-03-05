@@ -1,17 +1,23 @@
 package devfest.hack.day.materialdemo;
 
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ProgressBar;
 
 import devfest.hack.day.materialdemo.fragments.AddFragment;
 import devfest.hack.day.materialdemo.fragments.RecycleViewFragment;
+
+import static devfest.hack.day.materialdemo.AddActivity.IMAGE;
 
 
 public class MainActivity extends ActionBarActivity implements View.OnClickListener {
@@ -24,6 +30,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.my_awesome_toolbar);
+        ProgressBar progressBar = (ProgressBar) toolbar.findViewById(R.id.toolbar_progress_bar);
+        progressBar.setVisibility(View.INVISIBLE);
+
         setSupportActionBar(toolbar);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_launcher);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
@@ -62,6 +71,17 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         if (view.equals(fab)) {
+
+//            Intent intent = new Intent();
+//            String transitionName = getString(R.string.transition_main_actibity);
+//            ActivityOptionsCompat options =
+//                    ActivityOptionsCompat.makeSceneTransitionAnimation(MainActivity.this,
+//                            findViewById(R.id.imageView),   // The view which starts the transition
+//                            transitionName    // The transitionName of the view we’re transitioning to
+//                    );
+//            ActivityCompat.startActivity(MainActivity.this, intent, options.toBundle());
+//
+
             getSupportFragmentManager().beginTransaction().replace(R.id.content, new AddFragment()).addToBackStack("add").commit();
         }
     }

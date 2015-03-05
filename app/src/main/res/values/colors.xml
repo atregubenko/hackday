@@ -4,4 +4,10 @@
     <color name="yellow">#ffeeff41</color>
     <color name="action_bar">@color/blue</color>
     <color name="text_color">#ffaeaeae</color>
+
+    <!--global-->
+    <color name="primary_color">#03a9f4</color>
+    <color name="primary_dark_color">#ff0999a4</color>
+    <color name="accent_color">#ff0999a4</color>
+    <color name="window_background">@android:color/white</color>
 </resources>

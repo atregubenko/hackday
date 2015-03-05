@@ -1,5 +1,7 @@
 package devfest.hack.day.materialdemo.adapters;
 
+import android.graphics.drawable.BitmapDrawable;
+import android.support.v7.graphics.Palette;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,10 +35,28 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder viewHolder, int position) {
+    public void onBindViewHolder(final ViewHolder viewHolder, int position) {
         viewHolder.icon.setImageResource(mDataset.get(position).getResId());
         viewHolder.title.setText(mDataset.get(position).getTitle());
         viewHolder.count.setText(mDataset.get(position).getCount());
+
+//        Palette.generateAsync(((BitmapDrawable)viewHolder.icon.getDrawable()).getBitmap(),
+//                new Palette.PaletteAsyncListener() {
+//                    @Override
+//                    public void onGenerated(Palette palette) {
+//                        Palette.Swatch vibrant =
+//                                palette.getVibrantSwatch();
+////                        if (swatch != null) {
+//                            // If we have a vibrant color
+//                            // update the title TextView
+//                            viewHolder.title.setBackgroundColor(
+//                                    vibrant.getRgb());
+//                            viewHolder.title.setTextColor(
+//                                    vibrant.getTitleTextColor());
+////                        }
+//                    }
+//                });
+
     }
 
     @Override

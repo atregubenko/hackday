@@ -5,18 +5,15 @@
         android:id="@+id/action_favorite"
         android:title="@string/action_favorite"
         android:icon="@drawable/action_favorite_active"
-        android:orderInCategory="100"
-        app:showAsAction="always" />
+        android:orderInCategory="100"/>
     <item
         android:id="@+id/action_profile"
         android:title="@string/action_settings"
         android:icon="@drawable/action_profile_active"
-        android:orderInCategory="100"
-        app:showAsAction="always" />
+        android:orderInCategory="90"/>
     <item
         android:id="@+id/action_search"
         android:title="@string/action_search"
         android:icon="@drawable/action_search_active"
-        android:orderInCategory="100"
-        app:showAsAction="always" />
+        android:orderInCategory="80"/>
 </menu>
